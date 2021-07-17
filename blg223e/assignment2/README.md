@@ -1,5 +1,7 @@
 Bu ödevin 7. case'inin yanlış olduğunu düşünüyorum. Çünkü işlemci, 19 job'a kadar çalıştırabilmekte olup, sıra id'si 17 olan job'a geldiğinde bu job beklemeden direkt işlemcide çalışmalıdır. Ancak src klasöründeki WQ sorgusunda `WQ ` bastırmak yerine `WQ 17` bastırmıştır. Bu da demek oluyor ki case 7 de bir şeyler yanlış.
 
+**edit:** 100 / 17 = 5.8 den her job başına 5 düşüyor. MIPS_THRESHOLD değeri 5 olduğu için 17 id'li job çalıştırılmamalı, bekletilmeli. Bilemedim:/ 
+
 Ödev kodları karışık olabilir. Kusura bakmayınız :) Eğer kodu test etmek istiyorsanız. `cases.zip` dosyasındaki txt leri aşağıda belirtilen dizin yapısına uygun olacak şekilde çıkarınız. Bulunması gereken dosya ve dizinlerin yanlarına yıldız koydum.
 
 ```
