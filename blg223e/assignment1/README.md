@@ -1,32 +1,25 @@
-Eğer kodu test etmek istiyorsanız. `cases.zip` dosyasındaki txt leri aşağıda belirtilen dizin yapısına uygun olacak şekilde çıkarınız. Bulunması gereken dosya ve dizinlerin yanlarına yıldız koydum.
-
 ```
-- include * 
-    - ExpandingArray.h *
-
-- src *
-    - ExpandingArray.cpp *
-    - main.cpp *
-    - testcalico.yaml *
-
-- bin *
-    - main
-
-- case_1.txt *
-- case_2.txt *
-- case_3.txt *
-- case_4.txt *
-- case_5.txt *
-- case_6.txt *
-- case_7.txt *
-- HW1.pdf
-- cases.zip
+blg223e/assignment1
+├── bin
+│   └── main
+├── cases.zip
+├── HW1.pdf
+├── include
+│   └── ExpandingArray.h
+├── README.md
+└── src
+    ├── ExpandingArray.cpp
+    ├── main.cpp
+    └── testcalico.yaml
 ```
 
 Kodu test etmek için:
 
 ```shell
+$ git clone https://github.com/CihatAltiparmak/ITU-CE.git
 $ pip install calico
+$ cd ITU-CE/blg223e/assignment1
+$ unzip -j cases.zip
 $ cd src
 $ python -m calico.cli testcalico.yaml
 ```
