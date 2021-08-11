@@ -1,4 +1,4 @@
-Kod sadece case_5'i geçemiyor. Nedenini anlayabilmiş değilim.
+Kod bütün caseleri geçen kod.
 
 ```
 blg223e/assignment7

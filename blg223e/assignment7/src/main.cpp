@@ -15,7 +15,7 @@
 
 using namespace std;
 
-#define CAPACITY 1000000
+#define CAPACITY 100000000
 
 int arr[CAPACITY];
 
@@ -49,9 +49,9 @@ int main(int argc, char* argv[]) {
     string cmd; s >> cmd;
     function<int(int, int)> func;
     if (cmd == "MAXHEAP")
-        func = is_max;
+        func = greater<int>();//is_max;
     else if (cmd == "MINHEAP")
-        func = is_min;
+        func = less<int>();
 
     int capacity; s >> capacity;    
     int size = 0;
@@ -69,17 +69,13 @@ int main(int argc, char* argv[]) {
         if (cmd == "DEL") {
             int a; fcin >> a;
             heap.del(a);
-            heap.build();
         } else if (cmd == "ADD") {
             int a; fcin >> a;
             heap.add(a);
-            heap.build();
         } else if (cmd == "PRINT") {
             heap.print();
-            //cout << endl;
         } else if (cmd == "SORT") {
             heap.sort();
-            //cout << endl;
         }
     }
 

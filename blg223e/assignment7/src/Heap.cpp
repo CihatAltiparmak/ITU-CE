@@ -9,7 +9,6 @@
 
 #include "Heap.h"
 
-// #include <algorithm>
 using namespace std;
 
 void swap(int& a, int& b) {
@@ -37,19 +36,10 @@ void Heap::add(int val)
         return;
     int pos = this->size + 1;
     this->arr[pos] = val;
-    
-    while (pos != 1) {
-        int res = this->minmax(this->arr[pos >> 1], this->arr[pos]);
-        if (!res) {
-            swap(this->arr[pos >> 1], this->arr[pos]);
-        } else {
-            break;
-        }
-        pos >>= 1;
-    } 
-    
     this->size++; 
-    //cout << "dbg: [add] " << is_heap(arr + 1, arr + this->size+1) << endl;
+    pos = this->up_heapify(pos);
+    this->down_heapify(pos);
+
 }
 
 void Heap::del(int val) 
@@ -61,9 +51,9 @@ void Heap::del(int val)
 
     swap(this->arr[pos], this->arr[this->size]);
     this->size--;   
-    this->heapify(pos);
- 
-    // cout << "dbg: [del] " << is_heap(arr + 1, arr + this->size+1) << endl;
+    pos = this->down_heapify(pos);
+    pos = this->up_heapify(pos);
+    this->down_heapify(pos);
 }
 
 int Heap::find(int val) 
@@ -86,7 +76,7 @@ void Heap::fill_array(int* arr, int size)
 void Heap::build()
 {
     for (int i = (this->size >> 1); i > 0; i--)
-        this->heapify(i);
+        this->down_heapify(i);
 }
 
 void Heap::print() 
@@ -98,7 +88,7 @@ void Heap::print()
     }
 }
 
-void Heap::heapify(int i) 
+int Heap::down_heapify(int i) 
 {
     int left  = i << 1;
     int right = i << 1 | 1;
@@ -113,8 +103,21 @@ void Heap::heapify(int i)
 
     if (chosen != i) {
         swap(this->arr[i], this->arr[chosen]); 
-        this->heapify(chosen);
-    }
+        return this->down_heapify(chosen);
+    } else
+        return i;
+}
+
+int Heap::up_heapify(int i) {
+    if (i == 1)
+        return i;
+
+    int root = i >> 1;
+    if (!this->minmax(this->arr[root], this->arr[i])) {
+        swap(this->arr[root], this->arr[i]);
+        return this->up_heapify(root);
+    } else
+        return i;
 }
 
 void Heap::sort() {

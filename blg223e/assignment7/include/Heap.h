@@ -27,7 +27,8 @@ class Heap{
         void fill_array(int*, int);
         void build();
         void print();
-        void heapify(int);
+        int  up_heapify(int);
+        int  down_heapify(int);
         void sort();
 };
 
