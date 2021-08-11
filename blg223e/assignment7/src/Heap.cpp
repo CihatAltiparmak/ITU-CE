@@ -53,7 +53,6 @@ void Heap::del(int val)
     this->size--;   
     pos = this->down_heapify(pos);
     pos = this->up_heapify(pos);
-    this->down_heapify(pos);
 }
 
 int Heap::find(int val) 
