@@ -1,5 +1,8 @@
 TESTCALICO: 15/15
-HW GRADE: 13/15 (Demek ki yeteri kadar efektif değilmiş :))
+
+HW GRADE: 13/15 
+
+(Demek ki yeteri kadar efektif değilmiş :))
 
 Kod bütün caseleri geçiyor ama kodun efektifliğini bilemiyorum.
 
