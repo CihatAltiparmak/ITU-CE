@@ -1,3 +1,6 @@
+TESTCALICO: 15/15
+HW GRADE: 13/15 (Demek ki yeteri kadar efektif değilmiş :))
+
 Kod bütün caseleri geçiyor ama kodun efektifliğini bilemiyorum.
 
 İleride kendi yazdığım caseleri de buraya yükleyebilirim.(Yüklemeyebilirim de, Çok mb :/)

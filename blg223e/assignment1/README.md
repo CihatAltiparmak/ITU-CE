@@ -1,3 +1,5 @@
+TESTCALICO: 15/15
+
 ```
 blg223e/assignment1
 ├── bin

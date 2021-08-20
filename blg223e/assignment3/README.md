@@ -1,3 +1,4 @@
+TESTCALICO: 15 / 15
 Kod bütün case'leri geçmekle birlikte valgrind ile kontrol ettiğimde yazdığım kodda memory leak olduğunu fark ettim. Bunu bir ara düzeltirim.
 
 ```

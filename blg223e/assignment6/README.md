@@ -1,3 +1,4 @@
+TESTCALICO: 15/15
 Kod bütün case'leri geçiyor. 
 
 ```

@@ -1,3 +1,5 @@
+TESTCALICO: 12/15
+
 Kod bütün caseleri geçemiyor (case_4 te takılıyor), bu ödevi iyi yapamadım. Müsait bir vakitte tekrar bakacağım.
 
 ```
