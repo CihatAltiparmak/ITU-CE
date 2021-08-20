@@ -1,4 +1,4 @@
-TESTCALICO: 11 / 15
+TESTCALICO: 13 / 15
 
 Bu ödevin 7. case'inin yanlış olduğunu düşünüyorum. Çünkü işlemci, 19 job'a kadar çalıştırabilmekte olup, sıra id'si 17 olan job'a geldiğinde bu job beklemeden direkt işlemcide çalışmalıdır. Ancak src klasöründeki WQ sorgusunda `WQ ` bastırmak yerine `WQ 17` bastırmıştır. Bu da demek oluyor ki case 7 de bir şeyler yanlış.
 
